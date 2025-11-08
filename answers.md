@@ -17,7 +17,7 @@ The greedy algorithm would be to choose the largest such k such that $2^k \leq N
 **1b)** Prove that this algorithm is optimal by proving the greedy
   choice and optimal substructure properties.
 
-Greedy choice- We define the greedy choice as taking the largest $2^k$ such that $2^k <= N$. If we chose a larger value of of $k$ it would go over our total, and if we choose a smaller value, $k_*$, such that $k_*$ is $k-j$ where $1 \leq j \leq k$ then we would need $2^k=2^{k_*}2^{j}$ coins to represent the same amount, resulting in an additional $2^j$ coins to our list. So by choosing the largest $k$ we are able to minimize the amount of coins added to the list.
+Greedy choice- We define the greedy choice as taking the largest $2^k$ such that $2^k <= N$. If we chose a larger value of of $k$ it would go over our total, and if we choose a smaller value, $k_*$, such that $k_*$ is $k-j$ where $1 \leq j \leq k$ then we would need $2^k=2^{k_*-j}2^{j}$ coins to represent the same amount, resulting in an additional $2^j$ coins to our list. So by choosing the largest $k$ we are able to minimize the amount of coins added to the list.
 
 Optimal substructure- We want to show that after the greedy choice, $N'=N-2^k$ can also be solved optimally and will give optimal solution for $N$.
 
